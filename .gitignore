@@ -16,6 +16,8 @@ htmlcov/
 .env
 .env.*
 !.env.example
+k8s/*secret*.yaml
+!k8s/*secret*.example.yaml
 
 # Frontend dependencies and builds
 frontend/node_modules/

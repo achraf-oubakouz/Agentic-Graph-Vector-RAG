@@ -20,15 +20,30 @@ spec:
         - containerPort: 8000
         env:
         - name: NEO4J_URI
-          value: "neo4j+s://f627684a.databases.neo4j.io"         # fill in your bolt+s://xxxx.databases.neo4j.io
+          valueFrom:
+            secretKeyRef:
+              name: rag-backend-secrets
+              key: NEO4J_URI
         - name: NEO4J_USERNAME
-          value: "f627684a"
+          valueFrom:
+            secretKeyRef:
+              name: rag-backend-secrets
+              key: NEO4J_USERNAME
         - name: NEO4J_PASSWORD
-          value: "nSpt66dIrRgvL21UEzdeviX8T7Wub_FO2Da2lnKoHtE"         # fill in your password
+          valueFrom:
+            secretKeyRef:
+              name: rag-backend-secrets
+              key: NEO4J_PASSWORD
         - name: NEO4J_DATABASE
-          value: "f627684a"
+          valueFrom:
+            secretKeyRef:
+              name: rag-backend-secrets
+              key: NEO4J_DATABASE
         - name: GEMINI_API_KEY
-          value: "AIzaSyCO8dYeFuzYfRLchcoNVWDRNUDY7ZjoCUo"         # fill in your Gemini API key
+          valueFrom:
+            secretKeyRef:
+              name: rag-backend-secrets
+              key: GEMINI_API_KEY
         - name: LLM_PROVIDER
           value: "gemini"
         - name: GEMINI_MODEL_NAME
