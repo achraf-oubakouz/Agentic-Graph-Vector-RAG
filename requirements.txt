@@ -1,0 +1,21 @@
+# ── Web framework ──────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+python-multipart
+
+# ── Data & ML ──────────────────────────────────────────────────────────────
+numpy
+pandas
+scikit-learn
+matplotlib
+faiss-cpu
+
+# ── Utilities ──────────────────────────────────────────────────────────────
+python-dotenv
+aiofiles
+pydantic-settings
+neo4j
+transformers
+torch
+sentencepiece
+google-genai
